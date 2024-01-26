@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PracticaPracticosa.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PracticaPracticosa"
+    xmlns:vis="clr-namespace:PracticaPracticosa.View"
+
+    Shell.FlyoutBehavior="Disabled">
+    <!--
+    <Shell.TitleView>
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="logo.png" Style="{StaticResource Key=logoCabecera}" WidthRequest="45"/>
+        </Grid>
+    </Shell.TitleView>
+    -->
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate vis:Login}"
+        Route="MainPage" />
+</Shell>

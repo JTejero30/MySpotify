@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PracticaPracticosa</name>
+    </assembly>
+    <members>
+        <member name="T:PracticaPracticosa.ViewModel.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:PracticaPracticosa.ViewModel.LoginViewModel._changeRegisterCommand">
+            <summary>The backing field for <see cref="P:PracticaPracticosa.ViewModel.LoginViewModel.changeRegisterCommand"/>.</summary>
+        </member>
+        <member name="P:PracticaPracticosa.ViewModel.LoginViewModel.changeRegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:PracticaPracticosa.ViewModel.LoginViewModel.changeRegister"/>.</summary>
+        </member>
+        <member name="F:PracticaPracticosa.ViewModel.LoginViewModel._checkLoginCommand">
+            <summary>The backing field for <see cref="P:PracticaPracticosa.ViewModel.LoginViewModel.checkLoginCommand"/>.</summary>
+        </member>
+        <member name="P:PracticaPracticosa.ViewModel.LoginViewModel.checkLoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:PracticaPracticosa.ViewModel.LoginViewModel.checkLogin"/>.</summary>
+        </member>
+        <member name="T:PracticaPracticosa.ViewModel.RegisterViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:PracticaPracticosa.ViewModel.RegisterViewModel._goLoginCommand">
+            <summary>The backing field for <see cref="P:PracticaPracticosa.ViewModel.RegisterViewModel.goLoginCommand"/>.</summary>
+        </member>
+        <member name="P:PracticaPracticosa.ViewModel.RegisterViewModel.goLoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:PracticaPracticosa.ViewModel.RegisterViewModel.goLogin"/>.</summary>
+        </member>
+        <member name="F:PracticaPracticosa.ViewModel.RegisterViewModel._checkCommand">
+            <summary>The backing field for <see cref="P:PracticaPracticosa.ViewModel.RegisterViewModel.checkCommand"/>.</summary>
+        </member>
+        <member name="P:PracticaPracticosa.ViewModel.RegisterViewModel.checkCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:PracticaPracticosa.ViewModel.RegisterViewModel.check"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions">
+            <summary>
+            A helper type with generated validation stubs for types deriving from <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservableValidator"/>.
+            </summary>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(PracticaPracticosa.ViewModel.LoginViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:PracticaPracticosa.ViewModel.LoginViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:PracticaPracticosa.ViewModel.LoginViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(PracticaPracticosa.ViewModel.RegisterViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:PracticaPracticosa.ViewModel.RegisterViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:PracticaPracticosa.ViewModel.RegisterViewModel"/> objects.</returns>
+        </member>
+    </members>
+</doc>

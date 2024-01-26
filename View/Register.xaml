@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaPracticosa.View.Register"
+             Title="Register" 
+             xmlns:vm="clr-namespace:PracticaPracticosa.ViewModel"
+            BackgroundColor="#f3fbf8" 
+             >
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView  MaximumWidthRequest="600" BackgroundColor="#FFFFFF"  Margin="0,20,0,10" Padding="40,60,40,60" >
+        <VerticalStackLayout>
+
+            <Label Text="User:" Margin="0,20,0,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+              NumberOfTapsRequired="2"
+               Tapped="TapGestureRecognizer_Tapped"
+              />
+                </Label.GestureRecognizers>
+            </Label>
+            <Entry Text="{Binding UserName}" Placeholder="User" x:Name="userEntry" />
+            <CollectionView ItemsSource="{Binding ErroresUName}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Nombre:" Margin="0,20,0,10"/>
+            <Entry Text="{Binding Name}" Placeholder="Nombre" />
+            <CollectionView ItemsSource="{Binding ErroresName}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Edad:" Margin="0,20,0,10"/>
+            <Entry Text="{Binding Age}" Placeholder="Edad" />
+            <CollectionView ItemsSource="{Binding ErroresAge}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Password:" Margin="0,20,0,10"/>
+            <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password" />
+            <CollectionView ItemsSource="{Binding ErroresPass}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Repetir password:" Margin="0,20,0,10"/>
+            <Entry Text="{Binding PasswordR}" IsPassword="True" Placeholder="Repetir password" />
+            <CollectionView ItemsSource="{Binding ErroresPassR}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Registrar" Command="{Binding checkCommand}" Margin="0,60,0,10" MaximumWidthRequest="300" />
+            <Button Text="Go Login" Command="{Binding goLoginCommand}" Margin="0,0,0,10" MaximumWidthRequest="300" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

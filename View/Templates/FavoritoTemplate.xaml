@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaPracticosa.View.Templates.FavoritoTemplate"
+              xmlns:mo="clr-namespace:PracticaPracticosa.Model"
+                x:DataType="mo:Favorite"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
+    <Frame Margin="100,5, 100,0"
+        Padding="10"
+        HasShadow="True"
+        CornerRadius="10"
+        BackgroundColor="#f3fbf8"
+        HeightRequest="100"
+           >
+        <Grid VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" WidthRequest="200" HeightRequest="100" Source="{Binding Cover_medium}" VerticalOptions="Center"/>
+            <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                <Label  x:Name="tituloCancion" Text="{Binding Title}" VerticalOptions="Center"/>
+                <Label Text="{Binding Name}"/>
+            </VerticalStackLayout>
+            <Label VerticalOptions="Center" Grid.Column="2" Text="{Binding TotalLikes}"></Label>
+            <Button Grid.Column="3" HeightRequest="20" Style="{StaticResource HeartButtonStyle}" Clicked="HeartButton_Clicked" VerticalOptions="Center">
+                <Button.ImageSource>
+                    <FileImageSource x:Name="FileFav"/>
+                </Button.ImageSource>
+            </Button>
+            <toolkit:MediaElement x:Name="mediaElement" 
+                       ShouldAutoPlay="False"
+                                ShouldShowPlaybackControls="True"
+                                HeightRequest="100"
+                                WidthRequest="100"
+                                Source="{Binding Preview}"
+                                 IsVisible="false"/>
+            <Button Grid.Column="4" HeightRequest="50" BorderColor="#f3fbf8" BackgroundColor="#f3fbf8" Clicked="playSong">
+                <Button.ImageSource>
+                    <FileImageSource x:Name="buttonPlay" File="play.png"/>
+                </Button.ImageSource>
+            </Button>
+        </Grid>
+    </Frame>
+</ContentView>

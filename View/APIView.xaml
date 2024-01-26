@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaPracticosa.View.APIView"
+             Title="APIView"
+             xmlns:mo="clr-namespace:PracticaPracticosa.Model"
+             xmlns:te="clr-namespace:PracticaPracticosa.View.Templates">
+    <Shell.TitleView>
+        <FlexLayout AlignItems="Center" JustifyContent="SpaceBetween">
+            <Label x:Name="userName" Text="" TextColor="White"></Label>
+            <Image Source="logo.png" WidthRequest="45"/>
+
+            <Picker x:Name="myPicker" SelectedIndexChanged="myPicker_SelectedIndexChanged" TextColor="White" TitleColor="White">
+                <Picker.Items>
+                    <x:String >Log Out</x:String>
+                    <x:String >Buscar música</x:String>
+                    <x:String >Favoritos</x:String>
+                </Picker.Items>
+            </Picker>
+        </FlexLayout>
+    </Shell.TitleView>
+    <ScrollView>
+        <VerticalStackLayout>
+            <FlexLayout JustifyContent="Center" AlignContent="Center">
+                <!--
+                <Picker TextColor="White" TitleColor="White" VerticalOptions="Center">
+                    <Picker.Items>
+                        <x:String >Canciones</x:String>
+                        <x:String >Artista</x:String>
+                        <x:String >Album</x:String>
+                    </Picker.Items>
+                </Picker>-->
+                <SearchBar VerticalOptions="Center" Margin="0,10,0,0" Placeholder="Introduzca una cancion, autor o álbum..." x:Name="seeker" SearchButtonPressed="SearchBar_SearchButtonPressed" WidthRequest="600"></SearchBar>
+            </FlexLayout>
+            <CollectionView x:Name="songsData" Margin="0,30,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="mo:Song">
+                        <te:Card_image x:Uid="mo:Song.Id"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

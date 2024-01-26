@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plan:Simple xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+         x:Class="PracticaPracticosa.View.Favorites"
+         xmlns:mo="clr-namespace:PracticaPracticosa.Model"
+         xmlns:te="clr-namespace:PracticaPracticosa.View.Templates"
+         xmlns:plan="clr-namespace:PracticaPracticosa.Plantillas">
+    <Shell.TitleView>
+        <FlexLayout AlignItems="Center" JustifyContent="SpaceBetween">
+            <Label x:Name="userName" Text="Hola" TextColor="White"></Label>
+            <Image Source="logo.png" WidthRequest="45"/>
+            
+            <Picker x:Name="myPicker" SelectedIndexChanged="myPicker_SelectedIndexChanged" >
+                <Picker.Items>
+                    <x:String >Log Out</x:String>
+                    <x:String >Buscar música</x:String>
+                    <x:String >Favoritos</x:String>
+                </Picker.Items>
+            </Picker>
+        </FlexLayout>
+    </Shell.TitleView>
+    <ScrollView>
+        <VerticalStackLayout>
+            <CollectionView x:Name="favorites" Margin="0,30,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="mo:Favorite">
+                        <te:FavoritoTemplate/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</plan:Simple>
